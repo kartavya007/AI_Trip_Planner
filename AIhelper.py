@@ -1,5 +1,5 @@
 import google.generativeai as genai
-
+from FileHandel import FileHandel
 
 class AiHelper:
     def __init__(self):
@@ -16,3 +16,4 @@ class AiHelper:
         prompt = f"Create a {days}-day travel itinerary for {destination} focusing on {interests}. Include activities, dining, and sightseeing."
         response = self.model.generate_content(prompt)
         return response.text
+    
